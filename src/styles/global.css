@@ -71,6 +71,7 @@ select {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  width: min(1820px, calc(100vw - 2.5rem));
   padding: 1rem 0;
 }
 
@@ -101,16 +102,20 @@ select {
 
 .site-nav {
   display: flex;
-  gap: 0.35rem;
-  flex-wrap: wrap;
+  flex: 1 1 auto;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
   justify-content: flex-end;
+  min-width: 0;
 }
 
 .site-nav__link {
-  padding: 0.7rem 1rem;
+  flex: 0 0 auto;
+  padding: 0.64rem 0.78rem;
   border-radius: 999px;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: clamp(0.78rem, 0.78vw, 0.92rem);
+  white-space: nowrap;
   transition: 160ms ease;
 }
 
@@ -2502,6 +2507,7 @@ select {
 
   .site-nav {
     width: 100%;
+    flex-wrap: wrap;
     justify-content: flex-start;
   }
 
